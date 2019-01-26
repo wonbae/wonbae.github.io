@@ -1,4 +1,6 @@
-#this is header like title
+# this is header like title
+## this is header H2
+
 >이것은 인용문 blockquotes
 >>이것은 인용문안의 인용문
 
@@ -17,7 +19,15 @@ int main()
 }
 ~~~
 
+~~~c
+void f(){
+	printf("hello git");
+}
+~~~
+
 블라블라'인라인 코드 블럭'
+'인라인 코드 블럭'
+---
 
 **강조하는 부분**
 
@@ -26,4 +36,4 @@ int main()
 [google](https://www.google.co.kr"구글")
 
 *list item1
-*list item1-1
+	*list item1-1
