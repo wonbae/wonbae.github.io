@@ -1,5 +1,5 @@
 # Setup
-title:        Project or Site name
+title:        Commonplace Devblog
 tagline:      A responsive theme for your project on GitHub Pages
 baseurl:      ""
 paginate:     1
@@ -7,8 +7,8 @@ locale:       "en"
 
 # About/contact
 author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+  name:       WB Kim
+  url:        http://wonbae.github.io 
 
 # Gems
 gems:
