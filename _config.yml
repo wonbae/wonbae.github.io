@@ -1,13 +1,13 @@
 # Setup
-title:        Commonplace Devblog
-tagline:      A responsive theme for your project on GitHub Pages
+title:        Commonplace Dev Note
+tagline:      개발 비망록, Think about Thinking
 baseurl:      ""
 paginate:     1
 locale:       "en"
 
 # About/contact
 author:
-  name:       WB Kim
+  name:       WB Kim, Metamong
   url:        http://wonbae.github.io 
 
 # Gems
