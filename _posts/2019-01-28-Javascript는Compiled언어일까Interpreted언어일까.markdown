@@ -3,18 +3,46 @@
 >Javascript는 컴파일 언어도 아닌, 하이브리드도 아닌, **인터프리터 언어로 부르는 편이다.**
 
 
-## 컴파일 언어와 인터프리터 언어 (Compile Language & Interpreter Language)
+## 목표
+> * 컴파일 언어와 인터프리터 언어의 정의와 계념을 알자.
+	* JS가 어떤 종류의 언어인지 말할 수 있다.
+	* 그 이유에 대해서 예를 들어 설명 할 수 있다.
+
 ***
 
 
 
-## 혼란스러운 이유 (Reason why Confuse)
+
+## 컴파일 언어와 인터프리터 언어 
+#### (Compile Language & Interpreter Language)
 ***
 
 
-## 결론(Conclusion)
+
+
+
+
+## 혼란스러운 이유 
+#### (Reason why Confuse)
 ***
 
+
+
+
+
+## 예시
+#### (Exemple)
+***
+
+
+
+
+
+## 결론
+####(Conclusion)
+***
+
+'blabla'
 A scripting language is a programming language which is interpreted at runtime instead of being compiled to machine code. A language can be executed in different ways - 'interpreted' or 'compiled' (to bytecode or machine code). Traditionally, when talking about the difference about scripting vs. programming, scripting languages are interpreted and programming languages are compiled. Basically, all scripting languages are programming languages. The theoretical difference between the two is that scripting languages do not require the compilation step and are rather interpreted .
 
 The spectrum of scripting languages ranges from very small and highly domain-specific languages to general-purpose programming languages used for scripting. The most basic scripting interface developed at W3C is the DOM, the Document Object Model which allows programs and scripts to dynamically access and update the content, structure and style of documents. DOM specifications form the core of DHTML . Scripting can make Web pages more dynamic. For example, without reloading a new version of a page it may allow modifications to the content of that page, or allow content to be added to or sent from that page.
