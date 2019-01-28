@@ -5,10 +5,12 @@ date:   2019-01-28
 categories: main
 ---
 
->`Javascript는 컴파일 언어도 아닌, 하이브리드도 아닌, **인터프리터 언어로 부르는 편이다.**`
+> `Javascript는 컴파일 언어도 아닌, 하이브리드도 아닌, **인터프리터 언어로 부르는 편이다.** `
 
 
 ## 목표
+***
+
 > * `컴파일 언어`와 `인터프리터 언어`의 정의와 계념을 알자.
 * JS가 어떤 종류의 언어인지 말할 수 있다.
 * 그 이유에 대해서 예를 들어 설명 할 수 있다.
@@ -18,7 +20,7 @@ categories: main
 
 
 
-## 컴파일 언어와 인터프리터 언어 
+## 컴파일 언어와 인터프리터 언어란?
 (Compile Language & Interpreter Language)
 
 this is definition of compile and interpreter
