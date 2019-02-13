@@ -86,7 +86,6 @@ print(b)
 이처럼 a의 값을 바꾸더라도 b에 영향이 없다.
 
 2. **copy() 모듈 이용**
-
 ~~~python
 form copy import copy
 b = copy(a)
