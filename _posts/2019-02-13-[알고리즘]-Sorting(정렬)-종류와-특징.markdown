@@ -21,49 +21,16 @@
 **정렬 과정**
 1. 첫번째 원소부터 인접한 원소끼리 계속 자리를 교환하면서 맨 끝 자리까지 이동
 2. 한 단계가 끝나면 가장 큰 원소 또는 가장 작은 원소가 마지막 자리에 위치함
-3. 자리를 계속 교환하는 형태가 거품모양 같다해서 버블 소트
+
 
 
 **예제**
-![bubble_sort](../wonbae.github.io/imgfile/bubblesort.PNG)
+![bubble_sort](⁨../gitblog⁩/wonbae.github.io⁩/imgfile⁩/bubblesort.PNG)
 
 
 **코드**
-~~~cpp
-#include<iostream>
-#include<iomanip>
-using namespace std;
-using std::setw;
 
-void bubble(int list[], int n);
-int main(){
-	int i;
-	const int len = 5;
-	int list[len] = {55,7,78,12,42};
-
-	bubble(list,len);
-
-	for(int i = 0; i < len; i++){
-		cout<<setw(4)<<list[i];
-	}cout<<endl;
-
-	return 0;
-}
-
-void bubble(int list[], int n){
-	int tem;
-	for(int i = 0; i < n-1; i++ ){
-		for(int j = 0; j < n-i-1; j++){
-			if(list[j] > list[j+1]){
-				tem = list[j];
-				list[j] = list[j+1];
-				list[j+1] = tem;
-			}
-		}
-	}
-}
-#=> 7 12 42 55 78
-~~~
+C++ 구현
 
 {% highlight cpp %}
 #include<iostream>
@@ -103,7 +70,8 @@ void bubble(int list[], int n){
 
 
 **시간복잡도**
-`O(n^2)`
+
+`*O(n^2)*`
 
 
 **참고동영상**
@@ -114,11 +82,42 @@ void bubble(int list[], int n){
 
 
 
+
+
 ### Counting Sort (카운팅 정렬)
 ---
 
+>항목들의 순서를 결정하기 위해 집합에서 각 항목이 몇개씩 있는지 카운팅 하여, 선형 시간에 정렬하는 효율적인 알고리즘
+
+**제한사항**
+- `정수` 혹은 정수로 표현 가능한 자료에 대해서만 적용 가능
+	- 각 항목의 갯수를 카운팅 하기 위해, 정수 항목으로 인덱싱 되는 카운트들의 Array(배열)을 사용하기 때문임
+- 카운트들을 위한 충분한 공간을 확보하기 위해서 `집합 내의 가장 큰 정수`를 알아야 함
 
 
+**정렬과정**
+1. 카운팅 배열을 하나 만든다. 입력데이터에 들어있는 숫자들이 몇개씩 들어 있는지 카운팅해야 하기 때문
+2. 
+
+
+
+**예제**
+
+
+
+
+**코드**
+
+
+
+
+
+
+
+**시간복잡도**
+
+`*O(n + k)*`
+n은 항목의 갯수, k는 정수의 최대값
 
 
 
