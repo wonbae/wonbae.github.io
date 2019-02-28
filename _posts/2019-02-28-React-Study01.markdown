@@ -1,0 +1,22 @@
+# React Study01
+
+### React(리액트) 란?
+
+> Javascript(자바스크립트) 기반의 UI Library(라이브러리)이다.
+
+페이스북에서 만들었으며 UI를 효율적으로 만들기 위해 사용되는 라이브러리다.
+Javascript를 사용하기 때문에 React를 사용하면 JS도 지속적으로 상용할 수 있을꺼같다(엥귤러랑은 다르게..)
+
+또한 오픈소스 커뮤니티가 아주 좋아서 질문도 많고 그에따른 답도 아주 많은것이 장점이라고 한다.
+
+라이브러리 이기 때문에 UI(View)부분만 React를 사용하고 다른 부분은 Node.js, MongoDB, Django 등과 같이 사용할 수 있을꺼 같다.
+
+
+
+
+### Webpack이란?
+
+> javascript를 web browser가 이해할 수 있도록 변환(Transform)해주는 Tool, 모듈 번들러임
+
+모든 브라우저가 JS를 이해하는것이 아니기 때문에 웹펙을 사용해야 한다.
+Saas, .jade, .js 같은 것들이 웹펙을통해 js,css등의 브라우저가 이해할 수 있게 되는것임
