@@ -11,6 +11,15 @@ Javascript를 사용하기 때문에 React를 사용하면 JS도 지속적으로
 
 라이브러리 이기 때문에 UI(View)부분만 React를 사용하고 다른 부분은 Node.js, MongoDB, Django 등과 같이 사용할 수 있을꺼 같다.
 
+### 특징
+
+- Just JavaScript
+- Composition 
+	- 컴포넌트단위로 쪼개서 사용가능
+- Unidirectional Dataflow
+
+
+
 
 
 
