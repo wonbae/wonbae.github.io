@@ -85,6 +85,78 @@ front와 rear가 같으면 큐가 비어있다고 생각하면 된다.
 
     > 디큐로 뺄때는 front 증가시켜 front가 가리키는 장소를 빼고, 인큐로 삽입할때는 rear 증가시켜 rear가 가리키는 장소에 삽입, 이때 rear는 mod(모듈러계산)을 통해 큐의 길이만큼 됬을때 다시 0 번째부터 가리키토록 indexing해야됨. 
 
+**구현**
+~~~
+class MyCircularQueue {
+private:
+    vector<int> data;
+    int head;
+    int tail;
+    int size;
+public:
+    /** Initialize your data structure here. Set the size of the queue to be k. */
+    MyCircularQueue(int k) {
+        data.resize(k);
+        head = -1;
+        tail = -1;
+        size = k;
+    }
+    
+    /** Insert an element into the circular queue. Return true if the operation is successful. */
+    bool enQueue(int value) {
+        if (isFull()) {
+            return false;
+        }
+        if (isEmpty()) {
+            head = 0;
+        }
+        tail = (tail + 1) % size;
+        data[tail] = value;
+        return true;
+    }
+    
+    /** Delete an element from the circular queue. Return true if the operation is successful. */
+    bool deQueue() {
+        if (isEmpty()) {
+            return false;
+        }
+        if (head == tail) {
+            head = -1;
+            tail = -1;
+            return true;
+        }
+        head = (head + 1) % size;
+        return true;
+    }
+    
+    /** Get the front item from the queue. */
+    int Front() {
+        if (isEmpty()) {
+            return -1;
+        }
+        return data[head];
+    }
+    
+    /** Get the last item from the queue. */
+    int Rear() {
+        if (isEmpty()) {
+            return -1;
+        }
+        return data[tail];
+    }
+    
+    /** Checks whether the circular queue is empty or not. */
+    bool isEmpty() {
+        return head == -1;
+    }
+    
+    /** Checks whether the circular queue is full or not. */
+    bool isFull() {
+        return ((tail + 1) % size) == head;
+    }
+};
+
+~~~
 
 3. **연결 큐**
 	- 리스트 형식 사용

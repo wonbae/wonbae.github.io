@@ -36,6 +36,6 @@ Humans vs. Machines
  	- Information(data)
 
  AlphaGo, NVIDIA Auto Driving, Google Translation 등의 예를 통해 알 수 있는 AI 방식은
- > BigData + Hardware + Machine Learning Algorithm 이다
+ > BigData + Hardware + Machine Learning Algorithm 이다 
 
 
