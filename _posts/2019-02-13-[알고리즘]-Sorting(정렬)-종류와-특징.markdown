@@ -1,20 +1,20 @@
 # Sorting(정렬) 종류와 특징
 
->Bubble, Counting, Selection, Quick, Insertion, Merge 정렬이 있다.
+> Bubble, Counting, Selection, Insertion, Quick, Merge, Heap 정렬이 있다.
 
 
 #### 목표
 
 > * 정렬의 종류를 알아본다.
-* 각 정렬별 특징을 배운다.
-* Big-O notation
+> * 각 정렬별 특징을 배운다.
+> * Big-O notation
 
 
 
 
+--- 
+## 1. Bubble Sort (버블 정렬)
 
-### Bubble Sort (버블 정렬)
----
 
 >인접한 두 개의 원소를 비교하며 자리를 계속 교환하는 방식.
 
@@ -32,46 +32,49 @@
 
 C++ 구현
 
+
 {% highlight cpp %}
-#include<iostream>
-#include<iomanip>
-using namespace std;
-using std::setw;
 
-void bubble(int list[], int n);
-int main(){
-	int i;
-	const int len = 5;
-	int list[len] = {55,7,78,12,42};
+	#include<iostream>
+	#include<iomanip>
+	using namespace std;
+	using std::setw;
 
-	bubble(list,len);
+	void bubble(int list[], int n);
+	int main(){
+		int i;
+		const int len = 5;
+		int list[len] = {55,7,78,12,42};
 
-	for(int i = 0; i < len; i++){
-		cout<<setw(4)<<list[i];
-	}cout<<endl;
+		bubble(list,len);
 
-	return 0;
-}
+		for(int i = 0; i < len; i++){
+			cout<<setw(4)<<list[i];
+		}cout<<endl;
 
-void bubble(int list[], int n){
-	int tem;
-	for(int i = 0; i < n-1; i++ ){
-		for(int j = 0; j < n-i-1; j++){
-			if(list[j] > list[j+1]){
-				tem = list[j];
-				list[j] = list[j+1];
-				list[j+1] = tem;
+		return 0;
+	}
+
+	void bubble(int list[], int n){
+		int tem;
+		for(int i = 0; i < n-1; i++ ){
+			for(int j = 0; j < n-i-1; j++){
+				if(list[j] > list[j+1]){
+					tem = list[j];
+					list[j] = list[j+1];
+					list[j+1] = tem;
+				}
 			}
 		}
 	}
-}
-#=> 7 12 42 55 78
+	#=> 7 12 42 55 78
+
 {% endhighlight %}
 
 
 **시간복잡도**
 
-`*O(n^2)*`
+`**O(n^2)**`
 
 
 **참고동영상**
@@ -83,9 +86,9 @@ void bubble(int list[], int n){
 
 
 
-
-### Counting Sort (카운팅 정렬)
 ---
+## 2. Counting Sort (카운팅 정렬)
+
 
 >항목들의 순서를 결정하기 위해 집합에서 각 항목이 몇개씩 있는지 카운팅 하여, 선형 시간에 정렬하는 효율적인 알고리즘
 
@@ -124,7 +127,7 @@ n은 항목의 갯수, k는 정수의 최대값
 
 
 
-### Selection Sort (선택 정렬)
+### 3. Selection Sort (선택 정렬)
 ---
 
 - 주어진 자료에서 `가장 작은 값의 원소부터 차례대로` 선택하여 위치를 교환하는 방식
@@ -152,11 +155,16 @@ n은 항목의 갯수, k는 정수의 최대값
 
 
 
-
-
-
-### Quick Sort (퀵 정렬)
 ---
+## 4. Insertion Sort (삽입 정렬)
+
+
+
+
+
+---
+## 5. Quick Sort (퀵 정렬)
+
 
 [퀵정렬](https://www.youtube.com/watch?v=7BDzle2n47c)
 
@@ -164,19 +172,9 @@ n은 항목의 갯수, k는 정수의 최대값
 
 
 
-
-
-### Insertion Sort (삽입 정렬)
 ---
+## 6. Merge Sort (병합 정렬)
 
-
-
-
-
-
-
-### Merge Sort (병합 정렬)
----
 
 [머지소트](https://www.youtube.com/watch?v=QAyl79dCO_k)
 
@@ -184,12 +182,16 @@ n은 항목의 갯수, k는 정수의 최대값
 
 
 
+---
+## 7. Heap Sort (힙 정렬)
 
-###Big-O Notation(빅오표기법)
+
+
+### Big-O Notation(빅오표기법)
 ---
 
 
-###참고 동영상
+### 참고 동영상
 ---
 big-o표기법
 [빅오 한글](https://www.youtube.com/watch?v=6Iq5iMCVsXA&t=42s)
