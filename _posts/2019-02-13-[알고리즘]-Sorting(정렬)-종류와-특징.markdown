@@ -36,39 +36,33 @@ C++ 구현
 
 ```cpp
 
-	#include<iostream>
-	#include<iomanip>
-	using namespace std;
-	using std::setw;
+	
+#include<iostream>
+using namespace std;
 
-	void bubble(int list[], int n);
-	int main(){
-		int i;
-		const int len = 5;
-		int list[len] = {55,7,78,12,42};
+int main(){
+    freopen("input.txt", "rt", stdin);
+    int n, arr[101], tmp;
+    cin>>n;
 
-		bubble(list,len);
+    for(int i = 0; i < n; i++){
+        cin>>arr[i];
+    }
 
-		for(int i = 0; i < len; i++){
-			cout<<setw(4)<<list[i];
-		}cout<<endl;
-
-		return 0;
-	}
-
-	void bubble(int list[], int n){
-		int tem;
-		for(int i = 0; i < n-1; i++ ){
-			for(int j = 0; j < n-i-1; j++){
-				if(list[j] > list[j+1]){
-					tem = list[j];
-					list[j] = list[j+1];
-					list[j+1] = tem;
-				}
-			}
-		}
-	}
-	#=> 7 12 42 55 78
+    for(int i = 0; i < n - 1; i++){
+        for(int j = 0; j < n - i - 1; j++){
+            if(arr[j] > arr[j + 1]){    //오름차순
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            }
+        }
+    }
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
 
 ```
 
@@ -129,27 +123,59 @@ n은 항목의 갯수, k는 정수의 최대값
 
 
 ## 3. Selection Sort (선택 정렬)
-
-
-- 주어진 자료에서 `가장 작은 값의 원소부터 차례대로` 선택하여 위치를 교환하는 방식
-- 주어진 자료에서 N번째로 큰 혹은 작은 원소를 선택하는(Select) 방법
-- 최소값, 최대값 혹은 중간값을 찾으라는 문제에 적용
-
-
-**정렬과정**
-
- 일단 자료를 정렬하고 원하는 N번째 원소를 가져오기
- 1. 주어진 리스트 중에서 `최소값을 찾음`
- 2. 그 값을 리스트 `맨 앞`에 위치한 값과 `교환`
- 3. `맨 처음 위치를 제외한` 나머지 리스트를 대상으로 1 ~ 2 반복
-
-
+- 배열의 처음 값을 기준으로 배열의 나머지 부분의 최소값(min value)을 찾아 처음 부분과 교환하면서 정렬.
+- 2중 for문을 돌면서 배열의 최소값의 index(j)를 기억하고 있다가 처음 값(i)이랑 바꿈.
+- 맨앞은 정렬되어 가면서 진행.
 
 **시간복잡도**
 
 `O(n^2)`
 
 
+**정렬과정**
+
+ 1. 주어진 배열에서 가장 처음(i = 0)을 select
+ 1. select된 부분을 제외한 나머지 배열값 중에서 for문을 돌면서 `최소값을 찾음`, index를 기억.
+ 2. 최소 값이 select한 값과 비교해서 크거나 작다면(desc, asc) select한 값과 `교환`
+ 3. `맨 처음 위치를 제외한`(처음위치는 증가) 나머지 리스트를 대상으로 반복.
+
+**예제 코드**
+```cpp
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+    //input exemple : {6 13 5 11 7 23 15}
+    //freopen("input.txt", "rt", stdin);
+    int n, min, tmp = 0;
+    cin>>n;
+    vector<int> v(n);
+
+    for(int i = 0; i < n; i++){		//입력
+        cin>>v[i];
+    }
+
+    for(int i = 0; i < n - 1; i++){
+        min = i;	// 1. 처음 선택
+        for(int j = i + 1; j < n; j++){
+            if(v[j] < v[min]){		// 2.핵심
+                 min = j;
+            }
+        }
+        // swap(v[i], v[min]);		//3. 교환
+        tmp = v[i];
+        v[i] = v[min];
+        v[min] = tmp;
+    }
+
+    for(int i = 0; i < n; i++){
+        cout<<v[i]<<" ";
+    }
+
+    return 0;
+}
+```
 
 
 [선택정렬](https://www.youtube.com/watch?v=uCUu3fF5Dws)
@@ -158,14 +184,52 @@ n은 항목의 갯수, k는 정수의 최대값
 
 
 ## 4. Insertion Sort (삽입 정렬)
+- 배열의 1부터 시작해서 N - 1까지 탐색을 할때, 기준값보다 작은 것이 있다면 지금까지 지나온 배열값들과 비교하면서 내려간다.
+- 이때 배열을 밀어주면서 내려간다.
+- 약간 버블쏘트 역순느낌이랄까..
+- 배열값의 이동이 많다.
 
 **정렬 과정**
+(오름차순기준, ASC)
+1. 2중포문으로 해결, i = 1부터 시작하며 이 비교기준값을 tmp에 저장한다.
+2. i 인덱스보다 한칸 작은, 바로 직전의 값부터 0번째까지 쭉 내려가면서 비교.
+3. 만약에 tmp 보다 큰 값이 있다면 밀어넣는다. 이런식으로 쭉 내려간다.
 
 **코드**
+```cpp
 
+//Insertion Sort
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n, arr[101], tmp = 0, i, j;
+    cin>>n;
+
+    for(int i = 0; i < n; i++){
+        cin>>arr[i];
+    }
+
+    for(i = 1; i < n; i++){
+        tmp = arr[i];
+        for(j = i - 1; j >= 0; j--){
+            if(arr[j] > tmp){
+                arr[j + 1] = arr[j];
+            }else break;
+        }
+        arr[j + 1] = tmp;
+    }
+
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+
+```
 **시간복잡도**
 
-
+O(n^2)
 
 
 
