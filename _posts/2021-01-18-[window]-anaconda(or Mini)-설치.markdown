@@ -8,8 +8,8 @@
 2.  Anaconda의 장점과 필요성
 3.  Mini conda랑  Anaconda랑 뭐가 다름?
 4.  설치 방법
----
 
+---
 
 ### `Anaconda란?`
 
