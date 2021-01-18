@@ -26,3 +26,5 @@ _config.yml
 *.yml
 index.html
 *.gemspec
+*.html
+*.css
