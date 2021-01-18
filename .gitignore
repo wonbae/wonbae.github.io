@@ -18,3 +18,11 @@ Gemfile.lock
 .png
 .jpeg
 .gif
+
+/css
+/_includes
+/_layouts
+_config.yml
+*.yml
+index.html
+*.gemspec
