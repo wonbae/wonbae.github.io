@@ -8,6 +8,8 @@
 2.  Anaconda의 장점과 필요성
 3.  Mini conda랑  Anaconda랑 뭐가 다름?
 4.  설치 방법
+5.  실행
+6.  마치며
 
 ---
 
@@ -56,6 +58,35 @@ Download 받으시고 나머지 과정은 모두 Defualt로(기본설정) 설정
 >단, Window 사용자 분들 중에 `cmder`나 `window terminal`(cmd창 말고) 사용하시는 분들이라면 아래 사진 부분에서 체크박스 둘다 체크하셔야 해요. 안그러면 저처럼 `conda activate base` 명령어가 안먹혀요. 이럴경우에 환경변수를 맞추거나 일단은 Anaconda와 함께 깔린 `Anaconda Prompt`를 사용해야해요.  
 
 ![install](../imgfile/5.png)
+
+
+---
+
+### 실행
+
+cmd나 cmder, window terminal은 일단 놔두고
+
+`anaconda prompt`를 실행시킵니다.
+
+```
+conda
+```
+만 실행시켜 봅니다. 뭔가 나오죠?
+그럼 설치된겁니다. 그럼 이제 쥬피터놋북을 설치하셈
+
+```
+conda install jupyter
+```
+
+설치가 완료되면
+
+```
+jupyter notebook
+```
+이렇게 실행을 시키면 브라우저에서 실행이 될것임.
+
+자동적으로 실행이 안된다면
+command line에 url처럼 생긴걸 복사해서 붙여 넣어보면 될것임.
 
 
 ---
