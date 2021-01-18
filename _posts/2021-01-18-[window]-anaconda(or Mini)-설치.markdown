@@ -64,3 +64,6 @@ Download 받으시고 나머지 과정은 모두 Defualt로(기본설정) 설정
 한번 설치하면 자주 설치할 일이 없을꺼 같았지만, 어느덧 아나콘다만 여러번 설치한거 같다. 
 
 앞으로 설치방법이나 과정중에 생긴 오류에 대해서도 기록하는 습관을 들여서 다음번 설치시에는 한방에 해결할 수 있기를..!!
+
+#### img Source
+[install img from 머신-Geon](https://machine-geon.tistory.com/42)
