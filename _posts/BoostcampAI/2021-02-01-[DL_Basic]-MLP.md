@@ -139,6 +139,41 @@ loss를 w에 대해서 편미분해서 learning rate($\mu$)만큼 곱해서 원�
 <br><br><br><br>
 
 # Pytorch Loss Function
+## [MSELOSS](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html#torch.nn.MSELoss)
+- L2 Norm이고 Input $X$와 Target $Y$ 사이의 평균제곱오차를 측정하는 Class.
+- MSELOSS Class의 기본꼴은
+  ```python
+  torch.nn.MSELoss(size_average=None, reduce=None, reduction:str='mean')
+  ```
+  - Parameters들의 default값들이 저렇다. default값이란, 사람이 값을 안넣어주면 내부적으로 `__init__` 을 통해 값이 넣어지는걸 말함.
+  - reduction에 `reduction = 'sum'`을 넣으면 평균이 아닌 그냥 합을 구해줌. $n$으로 안나눔. 그렇담 default로 mean일경우 $n$으로 나눈 평균이 나옴.
+  - Class 안에 직접적인 계산은 `functional`을 import해서 forward func에서 `mse_loss`함수를 이용함.
+
+<br> 
+
+- Parameters
+  - 사용가능한 파라미터는 아래와 같고 앞에 입력가능한 Type과 오른쪽은 옵션이니 필수는 아닌듯.
+  - size_average(bool,optional)
+  - reduce(bool, optional)
+    - default : true 
+    - loss는 size_average에 따라 각 미니배치에 대해 평균화되거나 합산됨. false면 한 배치마다 loss를 반환하고 size_average를 무시함.
+  - reduction(string, optional)
+    - default : 'mean'
+
+- Shape
+  - Input 과 Target 값이 일치함.
+  - intput : (N, *) -> *는 아무숫자나 추가할 차원을 의미.
+  - output : (N, *)
+
+```python
+>>> loss = nn.MSELoss()
+>>> input = torch.randn(3, 5, requires_grad=True)
+>>> target = torch.randn(3, 5)
+>>> output = loss(input, target)
+>>> output.backward()
+```
+예제를 보면 default값이 들어가고 input과 target의 shape가 같으니 잘 돌아갈꺼 같다뉸~.
+output에는 MSE loss 값이 들어가 있겠고.
 
 
 
@@ -146,12 +181,11 @@ loss를 w에 대해서 편미분해서 learning rate($\mu$)만큼 곱해서 원�
 
 
 
+<br><br><br><br>
 
+## Reference
 
-
-
-
-
-### Reference
-
-bootcamp AI Tech pdf
+- bootcamp AI Tech pdf  
+- [blog_용이-Math&ML배우기](https://blogyong.tistory.com/28)
+- [pytorch doc](https://pytorch.org/docs/stable/nn.html#loss-functions)
+- [missinglink.ai](https://missinglink.ai/guides/neural-network-concepts/perceptrons-and-multi-layer-perceptrons-the-artificial-neuron-at-the-core-of-deep-learning/)
