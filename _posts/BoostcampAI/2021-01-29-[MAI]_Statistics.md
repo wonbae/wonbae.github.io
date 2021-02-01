@@ -1,5 +1,5 @@
 ---
-title: "Statistics 통계학 맛보기"
+title: "[MAI] Statistics 통계학 맛보기"
 tags:
   - Statistics
   - Day10 TIL
