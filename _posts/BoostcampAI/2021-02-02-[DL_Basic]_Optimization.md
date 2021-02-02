@@ -53,4 +53,12 @@ Boostcamp Day 12. 2021-02-02.
 
 ## Generalization
 
+우리의 목적은 일반화가 잘 된 모델을 만드는 것이다. Generalizaiton이 잘 된 모델은 예측을 잘 할것이고 안정적으로 성능이 좋을것이다. 왜?
 
+위에서도 말했듯이, Train data로 학습을 기가막히게 한다고 해도, 실전 Test data에서 Error가 많이 발생한다면 아무짝에 쓸모가 없을것이다. 이는 여러가지 경우가 있겠지만 Train data의 error를 낮추는거에 너무 정신이 팔려 과적합(Overfitting)이 되었을수도 있다. (_다른건 또 뭐가 있을까?_)
+
+> Training Data에서의 모델의 퍼포먼스와 아직 보지 않은(Test Data or Unseen Data) 데이터에서의 퍼포먼스가 다른 정도를 `Generalization Gap`이라고 하고, 이 Gap이 적게 모델을 학습시키는것을 (혹은 그렇게 할려고 하는것) `일반화(Generalization)` 이라고 함.
+
+<br>
+
+## Under-fitting vs. over-fitting
