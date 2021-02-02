@@ -62,3 +62,12 @@ Boostcamp Day 12. 2021-02-02.
 <br>
 
 ## Under-fitting vs. over-fitting
+### Under-fitting
+학습이 덜된 상태. 그래서 모델이 데이터를 잘 설명하지 못한다. 이런 모델은 학습을 더 진행시켜야 한다.
+
+### Over-fitting
+학습이 너무 많이 된거다. 오버피팅이 되면 일반화 gap이 커서 train data로 학습한 모델이 test data에서 Error를 예측한것보다 많이 발생한다. 비유를 하자면 수학문제를 계념을 이해한것이 아닌, 문제 자체를 외우다보니 실전 시험에서 틀려버리는 경우랄까...
+
+<br>
+
+## Cross validation
