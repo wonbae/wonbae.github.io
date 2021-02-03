@@ -1,5 +1,5 @@
 ---
-title: "[DL] Neural Networks & MLP(Multi-Layer Perceptron)"
+title: "[DL_Basic] Neural Networks & MLP(Multi-Layer Perceptron)"
 tags:
   - MLP
   - Neural Network

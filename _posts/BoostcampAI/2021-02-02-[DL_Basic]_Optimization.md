@@ -1,5 +1,5 @@
 ---
-title: "[DL] Optimization 최적화 방법"
+title: "[DL_Basic] Optimization 최적화 방법"
 tags:
   - Optimization
   - DAY12 TIL
