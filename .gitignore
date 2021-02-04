@@ -14,13 +14,11 @@ _site/
 Gemfile
 Gemfile.lock
 
-/imgfile
-.png
-.jpeg
+
 .gif
 _config.yml
 *.yml
-*.gemspec
+
 
 ## blog format
 format.md
