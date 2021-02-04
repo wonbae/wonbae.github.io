@@ -30,10 +30,11 @@ Sequential data는 우리가 일상적으로 많이 접하는 data이다. 대화
 ## Markov model(first-order autoregressive model)  
 현재의 나는 바로 전의 과거에 의존적이고 그 과거는 과거의과거에 의존적이다. 이와같이 sequential data를 다룰 때는 Markov model(first-order autoregressive model)이 활용되기도 한다. 장점은 joint distribution을 활용하는 거지만 한계가 있다. 사실은 과거의 수많은 경험과 요소들이 현재의 나를 만들기 때문이지 바로 직전의 경험이 나를 만들진 않기 때문.
 
-> $p(x_1, \ldots ,x_T) = p(x_T | x_{T-1})p(x_{T-1} | x_{T-2}) \cdots p(x_2 | x_1)p(x_1) = \prod_{t=1}^T p(x_t | x_{t-1})$ 
+$p(x_1, \ldots ,x_T) = p(x_T | x_{T-1})p(x_{T-1} | x_{T-2}) \cdots p(x_2 | x_1)p(x_1) = \prod_{t=1}^T p(x_t | x_{t-1})$  
 
 
 ~~$\prod$ 이건 s 부터 t까지 모두 곱~~
+
 
 ## Latent autoregressive model  
 앞에 설명한거의 단점은, 사실 이전에 더 많은 요소를 고려해야 하는데 그렇지 못한것이 단점이다. 그래서 사용하는 것이 이것이다. 중간에 hidden state가 있고 임마는 과거의 정보를 summary하고 있다. 그래서 다음번 time step은 이 하나의 hidden state에만 dependent하다는 것.
