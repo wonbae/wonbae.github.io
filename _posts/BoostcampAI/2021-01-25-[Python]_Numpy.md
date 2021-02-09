@@ -1,5 +1,4 @@
-boostcamp day 6. 2021-01-25.
-
+boostcamp day 06. 2021-01-25.
 
 # Numerical Python - Numpy
 > 대용량의 `Matrix`와 `Vector`같은 과학수학 연산을 빠르게 계산해주는 Python Package.
