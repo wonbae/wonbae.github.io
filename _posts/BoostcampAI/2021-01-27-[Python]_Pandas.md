@@ -238,7 +238,8 @@ budget_serires = df["budget"]
 budget_serires[budget_serires > 20000]  #20000 이상만 보여줌.
 ```
 - axis
-    - axis가 0이면 raw, 1이면 column 의 줄을 삭제
+    - axis가 `0`이면 `raw` 
+    - `1` 이면 `column` 의 줄을 삭제
 
 <br><br>
 
@@ -246,18 +247,169 @@ budget_serires[budget_serires > 20000]  #20000 이상만 보여줌.
 # Dataframe Operations
 
 - Serires Operation
-    - Index 기준으로 연산 수행, 겹치는 Index 없을 경우 NaN값 반환.
+    - Index 기준으로 연산 수행, 겹치는 Index 없을 경우 NaN값 반환.  
+    - s1과 s2를 합치면 어떻게 되는지 보자.
+    ```python
+    s1 = Series(range(1,6), index=list("abced"))
+    s1
+    ```
+    output
+
+    ```profile
+    a    1
+    b    2
+    c    3
+    e    4
+    d    5
+    dtype: int64
+    ```
+    ```python
+    s2 = Series(range(5,11), index=list("bcedef"))
+    s2
+    ```
+    output
+
+    ```profile
+    b     5
+    c     6
+    e     7
+    d     8
+    e     9
+    f    10
+    dtype: int64
+    ```
+    ```python
+    s1.add(s2)
+    ```
+    혹은
+    ```python
+    s1 + s2
+    ```
+    output
+    ```profile
+    a     NaN
+    b     7.0
+    c     9.0
+    d    13.0
+    e    11.0
+    e    13.0
+    f     NaN
+    dtype: float64
+    ```
+    결과를보면 Index별로 연산을 한다는게 무슨말인지 알것.
+
+<br>
+
 - DataFrame Operation
     - Column과 Index 모두 고려해서 딱 맞아야 연산 (add, sub, div, mul)
     - 그래서 Option을 `fill_value`
      같은걸 줘서 NaN 대신에 다른값 삽입 가능.
+
+<br>
+
 - Serires + DataFrame
     ```python
-    df.add(serires, axis=0)
-    # 이런식으로 하면 axis 기준으로 Broadcasting이 실행됨. axis = 0 이면 row 1이면 컬럼별로
+    df = DataFrame(np.arange(16).reshape(4,4), columns=list("abcd"))
+    df
+
+    >>>
+        a   b   c   d
+    0   0   1   2   3
+    1   4   5   6   7
+    2   8   9  10  11
+    3  12  13  14  15
+
+    s2 = Series(np.arange(10,14))
+    s2
+
+    >>>
+    0    10
+    1    11
+    2    12
+    3    13
+    dtype: int32
+
+    df.add(s2, axis=0)
+        a   b   c   d
+    0  10  11  12  13
+    1  15  16  17  18
+    2  20  21  22  23
+    3  25  26  27  28
+
+    # 이런식으로 하면 axis 기준으로 Broadcasting이 실행됨. axis = 0 이면 row, 1이면 column 별로
     ```
 
 <br><br>
+
+# lambda, map, apply
+## `map` for series
+- pandas의 series type의 데이터에도 map함수 사용가능.
+- function 대신 dict, sequence형 자료등으로 대체 가능
+```python
+s1 = Series(np.arange(10))
+s1.head(5)
+
+>>>
+0    0
+1    1
+2    2
+3    3
+4    4
+dtype: int32
+
+
+s1.map(lambda x: x**2).head(5)
+>>>
+0     0
+1     1
+2     4
+3     9
+4    16
+dtype: int64
+
+z = {1: 'A', 2: 'B', 3: 'C'}          # dict
+s1.map(z).head(5)
+
+>>>
+0    NaN
+1      A
+2      B
+3      C
+4    NaN
+dtype: object
+            # ----> dict type으로 데이터 교체, 없는 값은 NaN
+
+s2 = Series(np.arange(10,20))
+s1.map(s2).head(5)
+
+>>>
+0    10
+1    11
+2    12
+3    13
+4    14
+dtype: int32
+                # 같은 위치의 데이터를 s2로 전환
+```
+
+## `replace` function
+- Map 함수의 기능중 데이터 변환 기능만 담당.
+- 데이터 변환시 많이 사용하는 함수.
+```python
+# dict type 적용
+df.sex.replace(
+    {"male":0, "female":1}
+).head()
+
+# Target list, Conversion list
+df.sex.replace(
+    ["male", "female"],
+    [0,1], inplace=True)        #inplace 데이터 변환결과를 적용
+
+df.head(5)
+```
+
+
 
 # pandas Built-in Functions
 ## describe
