@@ -16,9 +16,10 @@ Boostcamp Day 16. 2021-02-16.
 
 ### Contents
 - Bag-of-Words
-- Word2Vec
-- GloVe
-- NaiveBayes Classifier, Word2Vec Models
+    - NaiveBayes Classifier
+- Word Embedding
+    - Word2Vec
+    - GloVe
 
 ## Intro 
 - Goal of This Course  
@@ -78,19 +79,48 @@ Bayes' Rule Applied to Documents and Classes. 나이브 베이즈 규칙에 적�
 - We can choose a class that has the highest probability for the document.
 
 > 어느 확률값이 큰지를 보고 최종적으로 큰 클래스의 확률값을 기반으로 예측을 한다. 이게 classfier가 동작하는 방식.
+
+### 문제점
 하지만 만약 연관이 깊은 단어임에도 불구하고 단어가 직접적으로 들어있지 않으면 확률값을 0으로 보기때문에 이를 개선하기 위해서 `Regularization` 등이 추가적으로 필요함. 그리고 이러한 파라미터 추정방식은 MLE(Maximum Likelihood Estimation) 를 통해 도출이 되고 이거 관련해서 더 찾아보자.
 
 <br>
 
+# Word Embedding
+- What is Word Embedding?
+    - Express a word as a vector
+    - 'cat' and 'kitty' are similar words, so they have similar vector representations -> `short distance`
+    - 'hamburger' is not similar with 'cat' or 'kitty', so they have different vector representations -> `far distance`
+    - `방법론`임.  단어의 의미를 벡터로(2D or 3D) 변환하는 것을 임베딩이라 하고 그 방법이 여러가지가 있지만 대표적으로 word2vec, GloVe가 있다.
+
 # Word2Vec
+- An algorithm for training vector representation of a word from context words(adjacent words)
+- Assumption : words in similar context will have similar meanings
+> 주어진 문장에서 특정한 단어는 주변의 단어들로 유추해서 해석할 수 있다. 즉, 문장에서 단어들 사이의 거리가 가까울수록 관계성이 있다고 보고 만들어진 알고리즘.
+등장한 단어의 주변 단어를 확률분포로 보고 예측한다.
+
+
 
 <br>
 
 # GloVe
+- GloVe : Global Vectors for Word Representation.  
+- Rather than going through each pair of an input and and output words, it first computes the co-occurrence matrix, to avoid training on identical word pairs repetitively.
+- Afterwards, it performs matrix decomposition on this co-occurrent matrix.  
+    - 앞에 배운 Word2Vec은 한 윈도우 내에서 빈번하게 등장하는 쌍의 단어들을 계속해서 내적(계산)하는 방법이다. 하지만 Window 크기 내에서만 바로 주변 단어만을 고려하기 때문에 문장 전체 혹은 문맥의 정보는 반영하기 어렵다.
 
-<br>
+    
+- $J(\Theta) = {1 \over 2} \sum_{i,j=1}^Wf(P_{ij})(u_i^Tv_j-\log P_{ij})^2$
+    - 
+    - 그래서 Glove는 입력어들의 embadding vector인 $v_i$ 와 출력 embadding vector인 $v_j$ 의 `내적`값에서 두 벡터가 한 윈도우 내에서 몇번 등장했는지의 값($P_{ij}$)에 log를 취해서 결국엔 내적값이 로그취한 값에 가까워 질 수 있게 loss function을 사용해서 중복된 계산을 Word2Vec에 비해 훨씬 적게해서 빠름.
 
-# NaiveBayes Classifier, Word2Vec Models
+- Fast training and Works well even with a small corpus.
+    - 미리 확률을 계산해서 단어의 등장 빈도를 계산하기 때문에 연산량이 줄어들고, 그래서 학습이 빠르고 더 적은 Data로도 잘 동작한다.
+    - Word2Vec이랑 GloVe랑 비등비등함.
+
+
+
+
+
 
 
 
