@@ -63,7 +63,7 @@ Word2Vec과 GloVe는 최근까지도 자주 사용되고 있는 word embedding �
 # Naive Bayes Classifier
 Bayes' Rule Applied to Documents and Classes. 나이브 베이즈 규칙에 적용된 문서나 클레스들을 보자면,
 
-- for a document *$d$* and a class *$c$*.
+- for a document *d* and a class *c*.
 
 <img src="../../imgfile/bcimg/NLP/NBC.PNG">
 
