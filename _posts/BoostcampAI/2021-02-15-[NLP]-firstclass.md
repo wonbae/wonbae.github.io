@@ -68,9 +68,9 @@ Bayes' Rule Applied to Documents and Classes. 나이브 베이즈 규칙에 적�
 <img src="../../imgfile/bcimg/NLP/NBC.png">
 
 - for each word $w_i$, we can calculate conditional probability for class $c$
-    > ${P(w_k|c_i)} = {{n_k} \over n'}$, where $n_k$ is occurrences of $w_k$ in documents of topic $c_i$
+    > ${P(w_k\vert c_i)} = {{n_k}\over{n'}}$, where $n_k$ is occurrences of $w_k$ in documents of topic $c_i$
  > `Class(c)` 를 고정해두고(주어지면), 각각의 `word(W)`가 나올 확률을 `독립적`으로 보겠다는 뜻.  
- 
+
  > 그렇담 실제에서는? 당연히 모든 단어들이 독립적이지 않으니깐 딥러닝을 사용하는거 아닙니까용. 일단 naive 방식은 단순하게 모든 단어를 독립적으로 본다고 가정하고 사용하는 방법이고 간간히 성능이 좋으니..
 
 - We calculate the conditional probability of the document for each class.
