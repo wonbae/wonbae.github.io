@@ -9,11 +9,11 @@ use_math: true
 Boostcamp Day 17. 2021-02-16.
 
 
-# Natural Language Processing (NLP)
+# Natural Language Processing (NLP) - RNN
 
 ### Contents
 - Basic problem settings
-- Model architecture and ho it works
+- Model architecture and how it works
 
 ## Intro
 자연어 처리 분야에서 Recurrent Neural Network(RNN)를 활용하는 다양한 방법과 이를 이용한 Language Model을 학습합니다.
@@ -25,6 +25,7 @@ Language Model은 이전에 등장한 단어를 condition으로 다음에 등장
 RNN을 이용한 Language Model에서 생길 수 있는 초반 time step의 정보를 전달하기 어려운 점, gradient vanishing/exploding을 해결하기 위한 방법 등에 대해 다시 한번 복습할 수 있는 시간이 됐으면 합니다.
 
  # Basic of Recurrent Neural Networks (RNNs)
+ - Vanila RNN이라고 불리기도함.
  - How to calculate the hidden state of RNNs
     - We can process a sequence of vectors by applying a recurrence formula at every time step.  
 
@@ -57,7 +58,10 @@ RNN을 이용한 Language Model에서 생길 수 있는 초반 time step의 정�
 
 
 
-
+# Vanishing/Exploding Gradient Problem in RNN (한계점)
+- Multiplying the same matrix at each time step during backpropagation causes gradient vanishing or exploding.
+- Backprob을 진행하면서 gradient가 사라지거나 반대로 가중되서 크게 증가하는 현상이 생긴다.
+- 이러한 바닐라 RNN의 한계점이 있다보니, LSTM이나 GRU등이 대체가능한 방법으로 존재한다.
 
 
 
