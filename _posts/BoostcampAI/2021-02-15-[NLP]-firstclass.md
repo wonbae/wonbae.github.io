@@ -9,10 +9,10 @@ tags:
 use_math: true
 ---
 
-Boostcamp Day 16. 2021-02-16.
+Boostcamp Day 16. 2021-02-15.
 
 
-# Natural Language Processing (NLP)
+# Natural Language Processing (NLP) - Bag-of-Words, Word Embedding
 
 ### Contents
 - Bag-of-Words
