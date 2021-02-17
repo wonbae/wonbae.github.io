@@ -1,8 +1,8 @@
 ---
-title: "[NLP] humm..."
+title: "[NLP] RNN and Language Modeling"
 tags:
-
-  - DAY17 TIL
+    - RNN
+    - DAY17 TIL
 use_math: true
 ---
 
