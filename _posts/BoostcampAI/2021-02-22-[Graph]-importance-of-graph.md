@@ -94,7 +94,7 @@ Boostcamp Day 21. 2021-02-22.
 
 - 방향성이 있는 그랩에서 `나가는 이웃`과 `들어오는 이웃`을 구분함.
     - 정점 $v$에서 나가는 이웃(Out-Neighbor)의 집함을 보통 $N_{out}(v)$로 적음.
-    - 정점 $v$에서 들어오는 이웃(Out-Neighbor)의 집함을 보통 $N_{in}(v)$로 적음.
+    - 정점 $v$에서 들어오는 이웃(In-Neighbor)의 집함을 보통 $N_{in}(v)$로 적음.
 
 <br>
 
@@ -110,6 +110,6 @@ graph 생성, 변경, 시각화 할 수 있는 라이브러리. 그래프의 구
 
 ## Reference
 
-- bootcamp AI Tech pdf  .
+- bootcamp AI Tech pdf.
 - NAVER Connect Foundation.
 
