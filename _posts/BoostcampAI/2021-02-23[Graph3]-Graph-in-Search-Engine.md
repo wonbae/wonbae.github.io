@@ -1,7 +1,8 @@
 ---
-title: "[Graph 2] 실제 Graph는 어떻게 생겼을까?"
+title: "[Graph 3] 검색 엔진에서는 그래프를 어떻게 활용할까?"
 tags:
     - Graph
+    - Page Rank
     - DAY21 TIL
 use_math: true
 ---
