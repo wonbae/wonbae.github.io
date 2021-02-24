@@ -108,6 +108,9 @@ ${1 \over 2\left\vert E \right\vert} \sum_{s \in S} (그래프에서 군집 s �
 
 <br><br>
 
+## Further Reading
+- [stanford-edu](http://infolab.stanford.edu/~ullman/mmds/ch10n.pdf)
+
 ## Reference
 
 - bootcamp AI Tech pdf  .
