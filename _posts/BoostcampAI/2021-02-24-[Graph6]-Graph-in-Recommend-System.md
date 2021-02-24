@@ -1,5 +1,5 @@
 ---
-title: "[Graph 6] Graph를 추천시스템에 어떻게 활용할까? (기본)"
+title: "[Graph6] Graph를 추천시스템에 어떻게 활용할까? (기본)"
 tags:
     - Graph
     - 내용 기반 추천

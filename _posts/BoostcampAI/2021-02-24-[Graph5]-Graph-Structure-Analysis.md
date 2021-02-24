@@ -1,5 +1,5 @@
 ---
-title: "[Graph 5] Graph의 구조를 어떻게 분석할까?"
+title: "[Graph5] Graph의 구조를 어떻게 분석할까?"
 tags:
     - Graph
     - Community

@@ -1,5 +1,5 @@
 ---
-title: "[Graph 1] Graph란 무엇이고 왜 중요한가"
+title: "[Graph1] Graph란 무엇이고 왜 중요한가"
 tags:
     - Graph
     - DAY21 TIL

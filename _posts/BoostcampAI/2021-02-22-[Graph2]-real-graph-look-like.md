@@ -1,5 +1,5 @@
 ---
-title: "[Graph 2] 실제 Graph는 어떻게 생겼을까?"
+title: "[Graph2] 실제 Graph는 어떻게 생겼을까?"
 tags:
     - Graph
     - DAY21 TIL

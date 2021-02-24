@@ -1,5 +1,5 @@
 ---
-title: "[Graph 3] 검색 엔진에서는 그래프를 어떻게 활용할까?"
+title: "[Graph3] 검색 엔진에서는 그래프를 어떻게 활용할까?"
 tags:
     - Graph
     - Page Rank
