@@ -3,11 +3,11 @@ title: "[Graph 3] 검색 엔진에서는 그래프를 어떻게 활용할까?"
 tags:
     - Graph
     - Page Rank
-    - DAY21 TIL
+    - DAY22 TIL
 use_math: true
 ---
 
-Boostcamp Day 21. 2021-02-22.
+Boostcamp Day 22. 2021-02-23.
 
 
 # Graph in AI
