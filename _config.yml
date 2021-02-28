@@ -39,10 +39,10 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "k1bae2301@gmail.com"
-  github: "https://github.com/wonbae"
-  linkedin: "https://www.linkedin.com/in/kim-wonbae-1aa246134/"
-  youtube: none
+  email: k1bae2301@gmail.com
+  github: https://github.com/wonbae
+  linkedin: https://www.linkedin.com/in/kim-wonbae-1aa246134/
+  # youtube: none
 #  medium: yourname
 #  reddit: yourname
 #  xing: yourname
@@ -188,7 +188,7 @@ timezone: "America/Toronto"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 10
+paginate: 7
 
 kramdown:
   input: GFM
