@@ -17,13 +17,15 @@ Boostcamp Day 25. 2021-02-26.
 
 ## Intro
 
+img upload test
 
 <img src="../../imgfile\bcimg\Graph\AGG.PNG">
 
-<img src="https://github.com/wonbae/wonbae.github.io/blob/master/imgfile/bcimg/Graph/AGG.PNG">
+<img src="https://github.com/wonbae/wonbae.github.io/blob/master/imgfile/bcimg/Graph/gnncrossentropy.PNG">
 
  
 ![test](https://github.com/wonbae/wonbae.github.io/blob/master/imgfile/bcimg/Graph/AGG.PNG)
+
 
 ## Reference
 
