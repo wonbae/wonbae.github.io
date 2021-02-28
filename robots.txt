@@ -2,5 +2,5 @@ User-agent: Googlebot
 User-agent: NaverBot
 Allow: /
 
-Sitemap: http://dymaxionkim.github.io/beautiful-jekyll/sitemap.xml
+Sitemap: https://github.com/wonbae/wonbae.github.io/blob/master/sitemap.xml
 
