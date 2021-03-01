@@ -12,6 +12,10 @@ title: dev-memorandum
 author: Wonbae Kim
 email: k1bae2301@gmail.com
 github: wonbae.github.io
+
+
+url: https://wonbae.github.io
+
 # --- List of links in the navigation bar --- #
 
 navbar-links:
@@ -23,7 +27,6 @@ navbar-links:
     - LeetCode: ""
     - SWEA: ""
 
-url: https://wonbae.github.io
 
 # --- Logo --- #
 
@@ -80,7 +83,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://wonbae.github.io/"
+url-pretty: "https://wonbae.github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
