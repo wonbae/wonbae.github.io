@@ -17,15 +17,7 @@ Boostcamp Day 25. 2021-02-26.
 
 ## Intro
 
-img upload test
-
-<img src="https://github.com/wonbae/wonbae.github.io/blob/master/assets/bcimg/Graph/correlation.PNG">
-
-<img src="/assets/bcimg/Graph/gnnad.PNG">
-
-![My helpful screenshot](/assets/bcimg/graphsage.PNG)
- 
-![test](https://github.com/wonbae/wonbae.github.io/blob/master/imgfile/bcimg/Graph/AGG.PNG)
+om/wonbae/wonbae.github.io/blob/master/imgfile/bcimg/Graph/AGG.PNG)
 
 
 ## Reference

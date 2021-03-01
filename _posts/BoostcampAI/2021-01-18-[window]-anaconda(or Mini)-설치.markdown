@@ -57,7 +57,7 @@ Download 받으시고 나머지 과정은 모두 Defualt로(기본설정) 설정
 
 >단, Window 사용자 분들 중에 `cmder`나 `window terminal`(cmd창 말고) 사용하시는 분들이라면 아래 사진 부분에서 체크박스 둘다 체크하셔야 해요. 안그러면 저처럼 `conda activate base` 명령어가 안먹혀요. 이럴경우에 환경변수를 맞추거나 일단은 Anaconda와 함께 깔린 `Anaconda Prompt`를 사용해야해요.  
 
-![install](../imgfile/5.png)
+![install](/assets/5.png)
 
 
 ---

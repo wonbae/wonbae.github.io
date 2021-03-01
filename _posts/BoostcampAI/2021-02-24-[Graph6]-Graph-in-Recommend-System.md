@@ -78,7 +78,7 @@ ex)
 
 > 바로 `상관 계수(Correlation Coefficient)`를 통해 측정합니다.
 
-<img src="../../imgfile\bcimg\Graph\correlation.PNG">
+<img src="/assets/bcimg/Graph/correlation.PNG">
 
 
 <br>
@@ -92,7 +92,7 @@ ex)
 - 평점 $r_{xs}$는 아래의 수식을 이용해 추정합니다.
 
 
-<img src="../../imgfile\bcimg\Graph\tmp.PNG">
+<img src="/assets/bcimg/Graph/tmp.PNG">
 
 - 즉, `취향의 유사도를 가중치로 사용한 평점의 가중 평균을 계산`합니다.
 

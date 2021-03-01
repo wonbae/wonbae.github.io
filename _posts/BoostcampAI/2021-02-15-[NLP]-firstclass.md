@@ -66,7 +66,7 @@ Bayes' Rule Applied to Documents and Classes. 나이브 베이즈 규칙에 적�
 
 - for a document *d* and a class *c*.
 
-<img src="../../imgfile/bcimg/NLP/NBC.PNG">
+<img src="/assets/bcimg/NLP/NBC.PNG">
 
 - for each word $w_i$, we can calculate conditional probability for class $c$
     - $P(w_k\vert c_i)={n_k\over n'}$ , where $n_k$ is occurrences of $w_k$ in documents of topic $c_i$.  

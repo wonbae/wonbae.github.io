@@ -28,7 +28,7 @@ GPT-1과 BERT는 Transfer Learning, Self-supervised Learning, Transformer를 사
 - it introduces special tokens, such as `<S>` / `<E>` / `$`, to achieve effective transfer learning durinf fine-tuning.
 - it does not need to use additional task-specific architectures on top of transferred.
 
-<img src="../../imgfile/bcimg/NLP/gpt1.PNG">
+<img src="/assets/bcimg/NLP/gpt1.PNG">
 
 
 <br><br>

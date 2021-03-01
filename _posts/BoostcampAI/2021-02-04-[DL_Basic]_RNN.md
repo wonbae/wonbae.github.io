@@ -39,7 +39,7 @@ $p(x_1, \ldots ,x_T) = p(x_T | x_{T-1})p(x_{T-1} | x_{T-2}) \cdots p(x_2 | x_1)p
 ## Latent autoregressive model  
 앞에 설명한거의 단점은, 사실 이전에 더 많은 요소를 고려해야 하는데 그렇지 못한것이 단점이다. 그래서 사용하는 것이 이것이다. 중간에 hidden state가 있고 임마는 과거의 정보를 summary하고 있다. 그래서 다음번 time step은 이 하나의 hidden state에만 dependent하다는 것.
 
-<img src="../../imgfile/bcimg/RNN/sequence-model.svg">
+<img src="/assets/bcimg/RNN/sequence-model.svg">
 
 > $\hat x = p(x_t|h_t)$  
 > $h_t = g(h_{t-1}, x_{t-1})$
@@ -66,33 +66,33 @@ RNN이 가진 단점이다. 가장 최근의 정보는 잘 기억하고 잘 적�
 ### Forget Gate
 - Decide which information to `throw` away.
 
-<img src="../../imgfile/bcimg/RNN/LSTM3-focus-f.png">
+<img src="/assets/bcimg/RNN/LSTM3-focus-f.png">
 
 ### Input Gate
 - Decide which information to `store` in the cell state.
 
-<img src="../../imgfile/bcimg/RNN/LSTM3-focus-i.png">
+<img src="/assets/bcimg/RNN/LSTM3-focus-i.png">
 
 ### Update cell
 Update the cell state.
 
-<img src="../../imgfile/bcimg/RNN/LSTM3-focus-C.png">
+<img src="/assets/bcimg/RNN/LSTM3-focus-C.png">
 
 ### Output Gate 
 - Make output using the updated cell state.
 
-<img src="../../imgfile/bcimg/RNN/LSTM3-focus-o.png">
+<img src="/assets/bcimg/RNN/LSTM3-focus-o.png">
 
 
 ### To Summarize
 
-<img src="../../imgfile/bcimg/RNN/lstm.png" width="80%">
+<img src="/assets/bcimg/RNN/lstm.png" width="80%">
 
 <br><br>
 
 # GRU - Gated Recurrent Unit
 
-<img src="../../imgfile/bcimg/RNN/LSTM3-var-GRU.png">
+<img src="/assets/bcimg/RNN/LSTM3-var-GRU.png">
 
 - Simpler architecture with two gates(rest gate and update gate)
 - No cell state, just hiden state.
@@ -110,12 +110,12 @@ Transformer는 Encoder와 Decoder로 구성되어있지만 강의에서는 Encod
 
 기존의 RNN은 재귀적인 느낌으로 돌아가는 거라고 하면 트렌스포머는 Attention이라 불리우는 구조를 활용한다.
 
-<img src="../../imgfile/bcimg/RNN/transformer_figure1.PNG" width="60%" height="60%">
+<img src="/assets/bcimg/RNN/transformer_figure1.PNG" width="60%" height="60%">
 
 - Transformer encodes each word to feature vectors with `Self-Attention`.  
 3개의 단어가 벡터로 self-attntion에 들어가면 3개의 벡터가 나오는데 그냥 나오는 것이 아니라 첫번째 벡터여도 두번째 세번째 벡터의 정보를 들고 어텐션에 들어가서 그 정보와 함께 틔어나온다. 그래서 서로 나머지 단어들과 연관이 있으니깐 `Dependencies`가 있다고 말함. 그 다음
 
-<img src="../../imgfile/bcimg/RNN/encoder_with_tensors.png" width="60%" height="60%">
+<img src="/assets/bcimg/RNN/encoder_with_tensors.png" width="60%" height="60%">
 
 Feed-forward paths are word-independent, and parallelized.  
 말인 즉슨, 그렇게 틔어나온 벡터들은 Feed-forward 단에서는 독립적으로 각각 병렬적으로 들어간다는 뜻.
@@ -128,7 +128,7 @@ Suppose we are encoding two words
 
 
 ## Transformer Encoding 순서(?)
-<img src="../../imgfile/bcimg/RNN/self-attention-output.PNG" width="60%" height="60%">
+<img src="/assets/bcimg/RNN/self-attention-output.PNG" width="60%" height="60%">
 
 1. 단어가 Input된다.
 2. Embedding을 해서 vector형식으로 만든다
@@ -141,7 +141,7 @@ Suppose we are encoding two words
 > value vector의 weighte를 구하는 과정이 각 단어에서 나오는 Query vector 와 Key Vector 사이의 내적, 그것을 Normalize하고 Softmax취해줘서 나오는 Attention을 Value vector와 Weighted Sum(Broadcasting)을 한게 최종적으로 나오는 Thinking이란 단어의 Encoding된 벡터가 되는거.
 
 
-<img src="../../imgfile/bcimg/RNN/self-attention-matrix-calculation-2.PNG" width="60%" height="60%">
+<img src="/assets/bcimg/RNN/self-attention-matrix-calculation-2.PNG" width="60%" height="60%">
 
 수식으로 표현하면
 
@@ -167,7 +167,7 @@ Calculating Q,K, and V from X in a matrix form.
     - 3) The result would be the $Z$ matrix that captures information from all the attention heads. We can send this forward to th FFNN.
 
 ## Encoding Process
-<img src="../../imgfile/bcimg/RNN/transformer_multi-headed_self-attention-recap.PNG">
+<img src="/assets/bcimg/RNN/transformer_multi-headed_self-attention-recap.PNG">
 
 1. get input sentence.
 2. We embed each word

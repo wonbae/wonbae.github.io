@@ -15,7 +15,7 @@ Boostcamp Day 08. 2021-01-27.
 
 # Python Data Analysis Library - Pandas
 
-<img src="../../imgfile/bcimg/pandas/pandaslogo.png" width="40%" height="40%">
+<img src="/assets/bcimg/pandas/pandaslogo.png" width="40%" height="40%">
 
 ### Contents
 
