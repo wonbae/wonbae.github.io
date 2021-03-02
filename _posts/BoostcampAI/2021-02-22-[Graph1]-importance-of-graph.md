@@ -1,9 +1,11 @@
 ---
 title: "[Graph1] Graph란 무엇이고 왜 중요한가"
-tags:
-    - Graph
-    - DAY21 TIL
+subtitle: Graph관련 기초 개념, 인공지능 문제, 중요한 이유
+tags: [Graph, Graph AI, GNN, DAY21 TIL]
 use_math: true
+cover-img: https://images.app.goo.gl/RHZeosLNwHRbSPxs5
+thumbnail-img: /assets/bcimg/Graph/graphusage.PNG
+share-img: https://images.app.goo.gl/RHZeosLNwHRbSPxs5
 ---
 
 Boostcamp Day 21. 2021-02-22.
@@ -34,6 +36,8 @@ Boostcamp Day 21. 2021-02-22.
 # Graph란 왜 중요할까?
 > 그래프는 복잡계(Complex System)를 효과적으로 표현하고 분석하기 위한 언어이다.
 
+<img src="/assets/bcimg/Graph/graphusage.PNG">
+
 예를들어 뇌(뉴럴간 연결), 지식 그래프, 화학 분자, 단백질 상호작용, 세포간 유사도 그래프, 이미지 분해. SNS, 위키피디아 문서검색 등 적용되고 활용되는 곳이 많다.
 
 - 복잡계는 구성 요소들 간의 상호작용으로 이루어집니다. 상호작용을 표현하기 위한 수단으로 그래프가 널리 사용됩니다.
@@ -46,19 +50,19 @@ Boostcamp Day 21. 2021-02-22.
   
 # Graph 관련 인공지능 문제
 - 정점 분류(Node Classification) 문제
-    - Twitter에서의 공유(Retweet)관계를 분석하여, 각 사용자의 정치적 성향을 알 수 있을까?
-    - 단백질의 상호작용을 분석하여 단백질의 역할을 알아낼 수 있을까?
+    - `Twitter`에서의 공유(Retweet)관계를 분석하여, 각 사용자의 정치적 성향을 알 수 있을까?
+    - `단백질`의 상호작용을 분석하여 단백질의 역할을 알아낼 수 있을까?
 - 연결 예측(Link Prediction)문제
     - 거시적, 미시적으로 바라봄.
-    - 페이스북은 어떻게 진화할까?
+    - `페이스북`은 어떻게 진화할까?
 - 추천(Recommencdation)문제
     - 각자에게 필요한 물건은 무엇일까?
 - 군집 분석(Community Detection) 문제
     - 연결 관계로부터 `사회적 무리(Social Circle)`을 찾아낼 수 있을까?
 - 랭킹(Ranking) 및 정보 검색(Information Retrieval)문제
-    - 웹(Web)이라는 거대한 그래프로부터 어떻게 중요한 Web을 찾을까?
+    - `웹(Web)`이라는 거대한 그래프로부터 어떻게 중요한 Web을 찾을까?
 - 정보전파(Information Cascading) 빛 바이럴 마케팅(Viral Marketing)문제
-    - 정보는 네트워크를 통해 어떻게 전달될까? 정보전달을 최대화 할 수 있는 방법은?
+    - `정보`는 네트워크를 통해 어떻게 전달될까? 정보전달을 최대화 할 수 있는 방법은?
 
 
 <br>
@@ -113,3 +117,5 @@ graph 생성, 변경, 시각화 할 수 있는 라이브러리. 그래프의 구
 - bootcamp AI Tech pdf.
 - NAVER Connect Foundation.
 
+### image
+- https://images.app.goo.gl/RHZeosLNwHRbSPxs5
