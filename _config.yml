@@ -22,8 +22,8 @@ navbar-links:
   About Me: "aboutme"
   AI:
     - Boostcamp_TIL: ""
-  PS:
-    - BOJ: "_posts/Algorithm"
+  Problem Solving:
+    - BOJ: ""
     - LeetCode: ""
     - SWEA: ""
 
