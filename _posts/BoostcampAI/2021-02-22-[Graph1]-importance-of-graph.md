@@ -3,9 +3,9 @@ title: "[Graph1] Graph란 무엇이고 왜 중요한가"
 subtitle: Graph관련 기초 개념, 인공지능 문제, 중요한 이유
 tags: [Graph, Graph AI, GNN, DAY21 TIL]
 use_math: true
-cover-img: https://images.app.goo.gl/RHZeosLNwHRbSPxs5
+cover-img: /assets/bcimg/Graph/internet-map-kaspersky.jpg
 thumbnail-img: /assets/bcimg/Graph/graphusage.PNG
-share-img: https://images.app.goo.gl/RHZeosLNwHRbSPxs5
+share-img: /assets/bcimg/Graph/internet-map.jpg
 ---
 
 Boostcamp Day 21. 2021-02-22.
@@ -117,5 +117,6 @@ graph 생성, 변경, 시각화 할 수 있는 라이브러리. 그래프의 구
 - bootcamp AI Tech pdf.
 - NAVER Connect Foundation.
 
-### image
-- https://images.app.goo.gl/RHZeosLNwHRbSPxs5
+### image ref.
+- [cover img](https://images.app.goo.gl/RHZeosLNwHRbSPxs5)
+- [share img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmountpeaks.wordpress.com%2F2012%2F03%2F06%2Fwhat-has-the-internet-evolved-into-nowadays%2F&psig=AOvVaw3GI_KL7mc11tPnrZGzOKIl&ust=1614779239762000&source=images&cd=vfe&ved=0CAYQjRxqFwoTCMCn0cnfke8CFQAAAAAdAAAAABAF)
