@@ -5,8 +5,7 @@ tags: [AI engineering, careers in AI, how to start]
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/hello_world.jpeg
-use_math: true
-comments: true
+
 ---
 
 # 후기와 느낀점

@@ -4,7 +4,7 @@ tags:
     - Graph
     - Community
     - DAY23 TIL
-use_math: true
+
 ---
 
 Boostcamp Day 23. 2021-02-24.

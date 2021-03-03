@@ -5,8 +5,7 @@ tags:
     - 내용 기반 추천
     - 협업 필터링
     - DAY23 TIL
-use_math: true
-comments: true
+
 ---
 
 Boostcamp Day 23. 2021-02-24.

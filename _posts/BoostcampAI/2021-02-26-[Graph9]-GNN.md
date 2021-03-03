@@ -5,8 +5,7 @@ tags:
     - Neural Network
     - GNN
     - DAY25 TIL
-use_math: true
-comments: true
+
 ---
 
 Boostcamp Day 25. 2021-02-26.
