@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "[Master Class] AI Engineer의 커리어빌딩과 실제 업무과정"
 subtitle: 하고싶다 되고싶다 너무 매력있다.
 tags: [AI engineering, careers in AI, how to start]
