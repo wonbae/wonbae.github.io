@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "[Graph10] 그래프 신경망이란 무엇인가 (심화)"
 tags:
     - Graph
@@ -7,7 +8,6 @@ tags:
     - DAY25 TIL
 use_math: true
 comments: true
-layout: post
 ---
 
 Boostcamp Day 25. 2021-02-26.
