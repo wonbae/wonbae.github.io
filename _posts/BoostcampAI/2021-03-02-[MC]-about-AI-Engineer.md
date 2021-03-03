@@ -15,3 +15,23 @@ comments: true
 역시 멋있고 매력적인 업무다. AI 엔지니어가 실제로 업무환경에서 어떻게 진행하는지 간략하게나마 볼 수 있었다. 쉽지 않아보이지만 할 수 있다는 마음이 크게 자리잡았다. 어렴풋이 그려왔던 것들이 어느정도 들어맞거나 아니면 확연하게 다른 부분을 경험할 수 있어서 좋았다. 앞으로 커리어 페스를 모델링으로 시작해서 벡엔드와 함께 경험해볼 수 있도록 계획해야 겠다. 그에 앞서 TOY PROJECT로 간단한 AI 서비스를 SERVING하는 개발을 해볼 필요성을 간절하게 느꼈다. 주저할 시간도 없고 여유로운 시간도 없다 왜냐하면 모델링에 관한 공부도 엄청 많고 거기에 개발역량과 CODING TEST 준비도 해야한다. 정말이지 숨이 턱 막히지만 해내야 한다. 최우선은 지금 학습하고 있는 것들에 대해서 온전히 들고갈 수 있도록 해야하고 틈이나면 TOY PROJECT를 진행해야 겠다. 아무리 생각해도 코테는 언제해야될지 쫌 막막하긴한데 해야지 우짜겠습니까. 나도 언젠가 `TOY-PROJECT`를 잘 만들어서 `UPSTAGE에서 초청강연`을 부탁받는 날이 오기를 기대해본다. 성킴님의 DIRECT MESSAGE를 받는 그날까지 `HUSTLE` 해야겠다.
 
 이번 주 마스터 클래스기간에 최대한 질문을 통해서 궁금한 부분을 잘 해소해야겠다. 그리고 밀린 학습정리나 이론, 개념, 수식, 실습코드에 대한 부분을 확실하게 복습하고 넘어가야 겠다. 블로그도 새로 새단장 했고 나름 재미도 붙였으니 열심히 작성하고 열심히 생각하고 열심히 고민해야 겠다. 저작권에 걸리지 않는 선에서 최대한 열심히 해야겠다. 주말간에 Attention is all you need 논문을 읽었다. 뭔가 하나라도 하니 기분이 아주 좋았는데 메타인지를 잘 해서 잊어버리지 않고 자주 생각하면서 이번주를 알차게 보내야겠다. 할수있다! 할수있다! (박상영)할수있다!
+
+<div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://freckels-bloom.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
