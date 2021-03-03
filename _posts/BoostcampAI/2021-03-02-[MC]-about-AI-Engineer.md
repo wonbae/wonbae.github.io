@@ -7,7 +7,7 @@ thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/hello_world.jpeg
 use_math: true
 comments: true
-
+layout: post
 ---
 
 # 후기와 느낀점

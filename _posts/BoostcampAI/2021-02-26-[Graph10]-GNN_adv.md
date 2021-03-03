@@ -7,6 +7,7 @@ tags:
     - DAY25 TIL
 use_math: true
 comments: true
+layout: post
 ---
 
 Boostcamp Day 25. 2021-02-26.
@@ -18,7 +19,6 @@ Boostcamp Day 25. 2021-02-26.
 
 ## Intro
 
-om/wonbae/wonbae.github.io/blob/master/imgfile/bcimg/Graph/AGG.PNG)
 
 
 ## Reference
