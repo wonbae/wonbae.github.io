@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "[Graph10] 그래프 신경망이란 무엇인가 (심화)"
 tags:
     - Graph
