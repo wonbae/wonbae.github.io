@@ -1,12 +1,13 @@
 ---
 title: "[Master Class] AI Engineer의 커리어빌딩과 실제 업무과정"
 subtitle: 하고싶다 되고싶다 너무 매력있다.
-tags: [AI engineering, careers in AI, how to start]
+tags: [AI engineering, careers in AI, how to start, Day27_TIL]
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/hello_world.jpeg
-
 ---
+
+Boostcamp Day 27. 2021-03-02.
 
 # 후기와 느낀점
 
