@@ -1,7 +1,7 @@
 ---
 title: "[Master Class] Data의 Copyright과 NLP"
 subtitle: 아무거나 주워먹으면 탈난다.
-tags: [AI engineering, Copyright, Data, NLP, Day27_TIL]
+tags: [AI engineering, Copyright, Data, NLP, Day28_TIL]
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/hello_world.jpeg
