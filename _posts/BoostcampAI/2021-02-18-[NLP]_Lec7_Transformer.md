@@ -1,22 +1,28 @@
 ---
 title: "[NLP] Transformer"
-tags:
-    - Transformer
-    - DAY19 TIL
+subtitle: 
+tags: [Transformer, Attention, Scaled dot-product Attention, Multi-head Attention, Positional Encoding,]
 use_math: true
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/hello_world.jpeg
 ---
 
 Boostcamp Day 19. 2021-02-18.
-
+DAY19 TIL
 
 # Natural Language Processing (NLP) - Transformer
 
 ### Contents
--
-- Multi-Head Attention
+
 
 ## Intro
-이번 강의에서는 현재 NLP 연구 분야에서 가장 많이 활용되고 있는 Transformer(Self-Attention)에 대해 자세히 알아봅니다. Self-Attention은 RNN 기반 번역 모델의 단점을 해결하기 위해 처음 등장했습니다. RNN과 Attention을 함께 사용했던 기존과는 달리 Attention 연산만을 이용해 입력 문장/단어의 representation을 학습을 하며 좀 더 parallel한 연산이 가능한 동시에 학습 속도가 빠르다는 장점을 보였습니다
+이번 강의에서는 현재 NLP 연구 분야에서 가장 많이 활용되고 있는 `Transformer(Self-Attention)`에 대해 자세히 알아봅니다. Self-Attention은 RNN 기반 번역 모델의 단점을 해결하기 위해 처음 등장했습니다. RNN과 Attention을 함께 사용했던 기존과는 달리 Attention 연산만을 이용해 입력 문장/단어의 representation을 학습을 하며 좀 더 parallel한 연산이 가능한 동시에 학습 속도가 빠르다는 장점을 보였습니다
+
+wiki docs에서는  
+> 2017년 구글이 발표한 논문인 "Attention is all you need"에서 나온 모델로 기존의 seq2seq의 구조인 `인코더-디코더를 따르면서도, 어텐션(Attention)만으로 구현한 모델`입니다. 이 모델은 RNN을 사용하지 않고, 인코더-디코더 구조를 설계하였음에도 성능도 RNN보다 우수하다는 특징을 갖고있습니다. 라고 설명함.
+
+Attention에 대한 이해가 필요하기 때문에 lec5,6의 Seq2Seq with Attention을 공부하고 오자궁.
 
 
 # Transformer : Multi-Head Attention
@@ -80,4 +86,4 @@ Boostcamp Day 19. 2021-02-18.
 
 - bootcamp AI Tech pdf  .
 - NAVER Connect Foundation.
-
+- [wiki docs](https://wikidocs.net/31379)
