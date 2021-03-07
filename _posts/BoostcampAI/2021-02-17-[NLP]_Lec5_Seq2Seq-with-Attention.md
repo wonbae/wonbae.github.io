@@ -75,7 +75,13 @@ encoder의 hidden state vector와 decoder의 hidden state vector사이의 유사
 - general
 - concat
 
-$수식$
+- dot
+    - $score(s_t, h_i) = s_t^T h_i$
+- general 
+    - $score(st, hi) = s^T_t W_a h_i $
+- concat
+    - $score(s_t, h_i) = W^T_a tanh(W_b[s_t; h_i])$
+
 
 <br>
 
