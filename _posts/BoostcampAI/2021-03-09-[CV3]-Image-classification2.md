@@ -40,7 +40,7 @@ DAY32 TIL
     - Larger receptive fields
     - More capacity and non-linearity  
 
-    즉, 더 많은 것들을 수용할 수 있을만큼 규모가 크고, 더 많은 용량과 non-linearity(?) 때문에 network를 deep하게 쌓는게 아주 효과적이다.
+    즉, 더 많은 receptive fields(영상의 경우 주변을 더 많이 참고0), 더 많은 용량과 non-linearity(?) 때문에 network를 deep하게 쌓는게 아주 효과적이다.
 - But, getting deeper and deeper always works better?  
     근데 더욱 더 깊어지면 더 좋을까?
 
