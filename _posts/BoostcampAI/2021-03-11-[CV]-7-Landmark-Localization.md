@@ -35,7 +35,7 @@ DAY34 TIL
 
 - Landmark location to Gaussian heatmap
 
-    - ${G_\sigma(x,y)} = exp(- {{(x-x_c)^2 + (y - y_c)^2} \over 2\sigma^2} )$
+    - ${G_\sigma(x,y)} = exp(- {(x-x_c)^2 + (y - y_c)^2 \over 2\sigma^2} )$
 
 # Hourglass network
 ![Newel-ECCV2016](/assets/bcimg/CV/Newel-ECCV2016.PNG "Newel-ECCV2016")
