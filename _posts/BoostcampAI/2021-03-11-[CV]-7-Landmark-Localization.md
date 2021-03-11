@@ -42,6 +42,14 @@ DAY34 TIL
 
 - `Stacked hourglass modules` allow for repeated bottom-up and top-down inference that refines the output of the previous hourglass module.
 
+- CNN과 Pooling을 통해 Down Sampling과정에서 이미지 속 모든 스케일에 관한 정보를 추출해 낸다.
+
+- Upsampling과정에서, 다운샘플링 과정에서 추출한 정보를 토대로 Pixel-wise output을 생성한다.
+
+- Output은 2개의 연속적인 1 * 1 CNN을 거쳐서 결과를 예측한다.
+
+- Hourglass를 여려개를 쌓아서 사용하기도 한다.
+
 # Extentions
 - DensePose
     - All pixels -> 3D surface of the human body.
