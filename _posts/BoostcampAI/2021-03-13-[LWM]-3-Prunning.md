@@ -8,7 +8,7 @@ tags: [Prunning, lottery hypothesis, Light weight model]
 Boostcamp Day 38. 2021-03-17.
 DAY38 TIL
 
-# Light-weight Model
+# Light weight Model - Prunning
 
 ### Contents
 - Unstructured Prunning
