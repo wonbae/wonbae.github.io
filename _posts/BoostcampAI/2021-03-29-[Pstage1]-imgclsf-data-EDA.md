@@ -1,7 +1,7 @@
 ---
-title: "[Pstage1] Day1. 이미지 분류 Data EDA"
+title: "[Pstage1] Day1. Data EDA"
 subtitle: Image Classification, Exploratory Data Analysis
-tags: [data EDA] 
+tags: [Image Classification, data EDA] 
 
 ---
 
