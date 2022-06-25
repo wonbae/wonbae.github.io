@@ -11,7 +11,7 @@ tags:
     - SOTA
     - 4th Rank in Papers with Code 
 use_math: true
-cover-img: /assets/NLP_papers/sembert_F2.png
+# cover-img: /assets/NLP_papers/sembert_F2.png
 thumbnail-img: /assets/NLP_papers/sembert_F1.png
 share-img: /assets/NLP_papers/sembert_F1.png
 ---
@@ -37,7 +37,9 @@ share-img: /assets/NLP_papers/sembert_F1.png
     
 ---
 
+
 <br/>
+
 
 # Abstract
 
@@ -51,7 +53,10 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 - SemBERT는 task-specific modification 없이 가볍게 fine-tunning 방식으로 그대로 사용한다. BERT에 비해 semantics-aware BERT는 개념이 더 단순하지만 강력하다.
 
+
+
 <br/><br/>
+
 
 
 # 1. Introduction
@@ -70,7 +75,10 @@ share-img: /assets/NLP_papers/sembert_F1.png
 > 3. text representation을 contextual explicit semantic embedding과 통합하여 downstream task에 대한 joint representation을 얻는 semantic integration componet   
 
 
+
 </br></br>
+
+
 
 # 2. Background and Related Work
 ## 2.1 Language Modeling for NLU
@@ -79,7 +87,9 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 ---
 
+
 <br/><br/>
+
 
 # 3. Semantics-aware BERT
 ![SemBERT-arch](../../assets/NLP_papers/sembert_F1.png)
@@ -92,7 +102,11 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 - 마지막으로 **word representation** 및 **semantic embedding**이 `concatenated` 되어서 downstream task에 대한 `joint representation`을 형성한다.  
 
+
+
 <br/>
+
+
 
 ## 3.1 Semantic Role Labeling
 
@@ -109,8 +123,10 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 ![SemBERT-arch](../../assets/NLP_papers/sembert_F2.png)   
     
+
 <br/>
    
+
 ## 3.2 Encoding
 - `raw text` sequence 그리고 `semantic role label` sequences 들은 처음에 pre-trained BERT에 `feed`(학습하기 위해 전달)하기 위해 `embedding vector`로 표현된다.
 
@@ -133,6 +149,7 @@ $$ e'(L_i) = W_2\left[ e(t_1), e(t_2), \cdots, e(t_m) \right] + b2,$$
 $$ e^t = \{ e'(L_1), \cdots, e'(L_n) \} $$
 
 - $W_2, b_2$는 학습가능한 파라미터.
+
 
 </br>
 
@@ -161,7 +178,10 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 
 ---
 
+
 </br></br>
+
+
 
 # 4. Model Implementation
 - SemBERT의 일부분 구현을 소개. SemBERT는 광범위한 task를 위한 선행 encoder가 될 수 있으며 예측을 위한 linear layer만 있는 end-to-end model이 될 수도 있다. simple하게 하기 위해 fine-tunning후 inference를 직접 제공하는 간단한 find-tuning만 보여주것으.
@@ -176,10 +196,17 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 
 - Classification 및 regression task의 경우 $h$는 class logit 또는 score를 얻기 위해 fully connection layer로 feed 된다. Training objective는 classification task를 위한 CrossEntropy와 regresstion task를 위한 Mean Square Error loss 이다.
 
-- span-based reading comprehension을 위해 $h$ 는 모든 token의 start logit 및 end logit을 얻기위해 fully connection layer로 feed 된다. 위치 $i$에서 $j$까지의 candidate span score는 $s_i + e_j$ 로 정의되며 $j \ge i$ 가 예측으로 사용되는 maximum scroing span 이다. 예측을 위해 pooled first token span 의 점수를 비교한다 : $s_{null} = s_0 + e_0$ 에서 null이 아닌 최고의 span $s^{\land}_{i,j} = max_{j \ge i}(s_i + e_j)$ 까지 $s^{\land}_{i,j} > s_{null} + \tau$ 일때 null이 아닌 answer를 예측, 여기서 threshold $\tau$ 는 dev-set에서 선택되어 F1을 최적화 한다.
+- span-based reading comprehension을 위해 $h$ 는 모든 token의 start logit 및 end logit을 얻기위해 fully connection layer로 feed 된다. 위치 $i$에서 $j$까지의 candidate span score는 $s_i + e_j$ 로 정의되며 $j \ge i$ 가 예측으로 사용되는 maximum scroing span 이다. 
+
+- 예측을 위해 pooled first token span 의 점수를 비교한다 : $s_{null} = s_0 + e_0$ 에서 null이 아닌 최고의 span $s^{\land}_{i,j} = max_{j \ge i}(s_i + e_j)$ 까지 $s^{\land}_{i,j} > s_{null} + \tau$ 일때 null이 아닌 answer를 예측, 여기서 threshold $\tau$ 는 dev-set에서 선택되어 F1을 최적화 한다.
+
+
 ---
 
+
 <br/><br/>
+
+
 
 # 7. Conclusion
 - 본 논문은 semantic-aware BERT network architecture를 제안한다.
