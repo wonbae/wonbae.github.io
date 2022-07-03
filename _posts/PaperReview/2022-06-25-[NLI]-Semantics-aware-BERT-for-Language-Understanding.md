@@ -102,7 +102,10 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 - 마지막으로 **word representation** 및 **semantic embedding**이 `concatenated` 되어서 downstream task에 대한 `joint representation`을 형성한다.  
 
-
+> **Semantic Embedding**  
+> **Contextual Embedding**  
+> **Semantic Integration**  
+> --->  SI(SE + CE)  
 
 <br/>
 
@@ -123,6 +126,11 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 ![SemBERT-arch](../../assets/NLP_papers/sembert_F2.png)   
     
+> 술어(Predicates)와 논항(Arguments)가 무슨말인지 모르겠으면  
+> [술어-논항 이란?](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=sonss1992&logNo=221520221825)  
+> "I Love You"를 예로든다면,  
+ Love가 술어, I는 주체 You는 대상 즉 논항  
+> 무조건 동사가 술어라는 법은 없다, 형용사 전치사 명사 다 된다. 자세한건 링크로!
 
 <br/>
    
@@ -130,12 +138,12 @@ share-img: /assets/NLP_papers/sembert_F1.png
 ## 3.2 Encoding
 - `raw text` sequence 그리고 `semantic role label` sequences 들은 처음에 pre-trained BERT에 `feed`(학습하기 위해 전달)하기 위해 `embedding vector`로 표현된다.
 
-- input sentence $X = \{ x_1, \cdots, x_n \}$ 는 길이가 $n$ 인 단어의 시퀀스고, 먼저 word piece로 tokenize된다. 그 다음에 transformer encoder는 self-attention을 통해 각 token에 대한 contextual information을 capture하고 contextual embedding을 생성한다.
+- input sentence $X = \{ x_1, \cdots, x_n \}$ 는 길이가 $n$ 인 단어의 시퀀스고, 먼저 word piece로 tokenize된다. 그 다음에 transformer encoder는 self-attention을 통해 각 token에 대한 `contextual information`을 capture하고 `contextual embedding`을 생성한다.
 
 - 각 술어와 관련된 $m$ label sequence의 경우 $T = \{ t_1, \cdots, t_n \}$이다. 여기서 $t_i$는 $\{ label^i_1, label^i_2, \cdots, label^i_n \}$로 표시되는 $n$개의 label이다.
 
 - 레이블은 word-level이므로 길이는 $X$의 원래 문장 길이 $n$과 같다. 
-- semantic signal을 embedding으로 간주하고 lookup table을 사용하여 이러한 label을 $vector \{ v^i_1, v^i_2, \cdots, v^i_n \}$에 맵핑하고 BiGRU layer에 feed하여 latent space에서 label sequence $m$에 대한 label representation을 얻는다.
+- semantic signal을 embedding으로 간주하고 `lookup table`을 사용하여 이러한 label을 $vector \{ v^i_1, v^i_2, \cdots, v^i_n \}$에 맵핑하고 BiGRU layer에 feed하여 latent space에서 label sequence $m$에 대한 `label representation`을 얻는다.
 
 $$ e(t_i) = BiGRU(v^i_1, v^i_2, \cdots, v^i_n) where 0 < i \leqslant m $$
 
@@ -189,7 +197,7 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 ## 4.1 Semantic Role Labeler
 - Semantic Label을 얻기 위해 pre-trained된 SRL Module을 사용하여 모든 술어와 해당 논항을 한번에 예측한다. Peters et al.(2018)을 구현했으며 CoNLL-2012 shared task를 위해 English OntoNote v5.0 benchmark에서 F1 84.6%를 달성하였다. 구현시 총 104개의 label이 있으며 논항이 아닌 단어는 $O$를 사용하고 술어에는 동사 label을 사용.
 
-> 이거 멀티링구얼 아니라서 한국어는 아마 안될껄요? kakao Pororo의 SRL로 대체해서 사용해야할듯?
+> 이거 멀티링구얼 아니라서 한국어는 아마 안될껄요? kakao Pororo의 SRL이 대안인지 아님 다른게 대안일지 더 찾아봐야함..  
 
 ## 4.2 Task-specific Fine-tuning
 - Section 3.에서는 semantics-aware BERT representation을 얻는 방법을 설명했다. 여기에서는 classification, regression 및 span-based MRC task에 SemBERT를 적용하는 방법을 보여준다. Fused contextual semantic 및 LM representation $h$를 더 낮은 차원으로 변환하고 예측 분포를 얻는다.
@@ -210,12 +218,22 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 
 # 7. Conclusion
 - 본 논문은 semantic-aware BERT network architecture를 제안한다.
-- baseline BERT보다 더 나은 성능을 보여준다. 성능 향상을 위해 explicit contextual semantic과 SOTA pre-trained language representation과 효과적으로 통합될 수 있음을 보여준다.
+- `baseline BERT보다 더 나은 성능`을 보여준다. 성능 향상을 위해 `explicit contextual semantic과 SOTA pre-trained language representation과 효과적으로 통합될 수 있음`을 보여준다.
 - 최근의 연구가 성능 향상을 위해 `복작함 매커니즘을 경험적으로 쌓는데 중점을 두는 대신, 단순하지만 효과적인 방법`을 통해 보다 정확한 이해와 추론을 위한 semantic signal을 융합하는데 약간의 관심을 기울이기를 희망한다.
 
 
+
 </br></br></br>
+
+---
+
 원래 영어도 못하지만,,  
 하... 중국인 영어 논문 왜이리 어렵냐... 못 읽겠다..  
 하지만 이분 덕분에 한결 수월했다. Tanks a lot.
 - credit to [Jeonsworld](https://jeonsworld.github.io/NLP/sembert/)
+
+
+- [한국어 BERT base SRL Github Link](https://github.com/machinereading/BERT_for_Korean_SRL)  
+
+- 대략 SRL의 진화과정이 BiLSTM -> ELMo -> BERT -> CharBERT 인거 같다.
+- [Kakao Pororo](https://kakaobrain.github.io/pororo/tagging/srl.html)에서 제공되는 SRL은 [CharBERT](https://github.com/wtma/CharBERT)인데 뱉어내는 Tag가 BIO Tag와 다른거 같다.
