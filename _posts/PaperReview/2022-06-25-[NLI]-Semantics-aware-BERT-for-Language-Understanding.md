@@ -69,14 +69,16 @@ share-img: /assets/NLP_papers/sembert_F1.png
 - 그래서 semantic role labeling(SRL)과 같이 누가, 어디서, 언제, 왜, 무엇을 했는지를 추가로 사용하겠다능.
 - 닝갠은 일반적으로 다양한 술어-논항(predicate-argument)구조를 사용하지만 뉴럴 모델은 다중 의미 구조의 modeling을 거의 사용 안하고 encoding함.
 - 그래서 우리 SemBERT로 여러 술어별 논항 시퀀스에 문장의 contextual semantic을 풍부하게 가져가겠음  
+
 </br>
+
 > 1. 다양한 semantic role label로 입력 문장에 주석을 달기 위한 out-of-shelf semantic role labeler
 > 2. pre-trained language model을 사용해서 input raw text에 대한 representation을 만들고 semantic role labeld이 embedding되도록 맵핑하는 sequence encoder
 > 3. text representation을 contextual explicit semantic embedding과 통합하여 downstream task에 대한 joint representation을 얻는 semantic integration componet   
 
 
 
-</br></br>
+</br> </br>
 
 
 
@@ -211,7 +213,7 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 ---
 
 
-</br></br>
+</br> </br>
 
 
 
@@ -230,13 +232,13 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 
 - span-based reading comprehension을 위해 $h$ 는 모든 token의 start logit 및 end logit을 얻기위해 fully connection layer로 feed 된다. 위치 $i$에서 $j$까지의 candidate span score는 $s_i + e_j$ 로 정의되며 $j \ge i$ 가 예측으로 사용되는 maximum scroing span 이다. 
 
-- 예측을 위해 pooled first token span 의 점수를 비교한다 : $s_{null} = s_0 + e_0$ 에서 null이 아닌 최고의 span $s^{\land}_{i,j} = max_{j \ge i}(s_i + e_j)$ 까지 $s^{\land}_{i,j} > s_{null} + \tau$ 일때 null이 아닌 answer를 예측, 여기서 threshold $\tau$ 는 dev-set에서 선택되어 F1을 최적화 한다.
+- 예측을 위해 pooled first token span 의 점수를 비교한다 : $s_{null} = s_0 + e_0$ 에서 null이 아닌 최고의 span  $ s^{\land}_{i,j} = max_{j \ge i}(s_i + e_j) $  까지  $ s^{\land}_{i,j} > s_{null} + \tau $  일때 null이 아닌 answer를 예측, 여기서 threshold  $\tau$  는 dev-set에서 선택되어 F1을 최적화 한다.
 
 
 ---
 
 
-<br/><br/>
+<br/> <br/>
 
 
 
@@ -247,7 +249,7 @@ $$ e*_i = ReLU(e'_i), e(x_i) = MaxPooling(e^*_1, \cdots, e^*_{l-k+1}) $$
 
 
 
-</br></br></br>
+</br> </br> </br>
 
 ---
 
