@@ -32,7 +32,7 @@ share-img: /assets/NLP_papers/sembert_F1.png
     - Semantics-aware BERT
     - Model Implementation
     - Experiments (skip)
-    - Analysis
+    - Analysis (skip)
     - Conclusion
     
 ---
@@ -82,7 +82,31 @@ share-img: /assets/NLP_papers/sembert_F1.png
 
 # 2. Background and Related Work
 ## 2.1 Language Modeling for NLU
+- NLU task는 자연어처리의 포괄적인 이해와 추가 추론 및 추리 능력을 요구한다.
+NLU 연구의 일반적인 트렌드는 모델이 stacked attention mechanisms이나 대량의 말뭉치(corpus)로 더욱 더 정교해지고 있으며, 그 결과 컴퓨팅 연산이 폭발적으로 필요하게 된다.   (더 복잡하고 더 큰 데이터를 사용한다)  
+특히, ELMo, GPT 및 BERT와 같은 pre-trained된 언어 모델은 NLU task를 높은 성능에 다다를 수 있도록 부스트 해준다.
+
+- Distributed representations는 large-scale unlabeled text에서 단어의 local co-occurence(동시 발생?)를 capture할 수 있기때문에 NLP model의 표준으로  널리 사용되었다.  
+
+- 그러나, word vector를 학습하기 위한 이러한 접근 방식은 sentence level의 contextual encoding을 고려하여 각 단어에 대한 single, contex-independent representation을 포함합니다.
+
+- 따라서 최근 소개된 ELMo, GPT, BERT및 XLNet을 포함한 contextual language models는 더 나은 표현을 위해 contextual sentence modeling을 강화하여 gap을 채우고, 그 중 BERT는 서로 다른 pre-trained objective를 사용하여 context를 양방향으로 capture할 수 있다(next sentence prediction, bi-diractional)  
+
+- 새로 제안된 LM이 기존 embedding에 비해 향상된 것은 LM에서 context에 맞는 feature을 추출하는데 중점을 두고 있기 때문. 이러한 contextual word embdding을 기존 task-specific architecture와 통합할 때 ELMo는 SQuAD에 대한 QA, sentiment analysis, named entity recognition task에서 효과적이였다. 본 논문에서는 pre-trained BERT를 explicit context semantic을 학습하기 위한 backbone encoder로 사용한다.  
+
+
 ## 2.2 Explicit Contextual Semantics
+
+- distributed representation이 어느정도 semantic에 강화되었지만 충분하지 않다.
+- FrameNet, `PropBank`를 포함하여 공식적인 semantic frame이 몇가지 있는데 PropBank computational linguistic에서 더 널리 사용된다. 
+- 일반적으로 semantic 관계를 `술어(predicate)-논항(argument)`구조로 제시한다.
+- 예를 들어, target동사(predicate) sold가 주어졌을 때, 모든 논한은 다음과 같이 label이 지정된다.
+
+$$ [Charli_{ARG0}][sold_V][a \space book_{ARG1}][to \space Sherry_{ARG2}][lask \space week_{AM-TMP}] $$
+
+- $ARG0$ 는 판매자(agent)를 나타내고 $ARG1$ 는 판매한것(theme) 을 나타내고 $ARG2$ 는 구매자 (recipient)를 나타낸다. $AM-TMP$ 는 action의 time을 나타내는 부속물 (adjunct)이고 $V$ 는 술어(predicate)을 나타낸다.
+
+- 술어-논항 구조를 구문분석 하기위한 NLP task semantic role labeling(`SRL`)이 있다.
 
 
 ---
